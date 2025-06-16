@@ -11,7 +11,7 @@ function Products() {
                 <div className="w-full flex justify-between items-center py-2">
                     <div className="relative flex items-center justify-end">
                         <Search className="absolute p-1 mr-1 text-gray-500"/>
-                        <Input className="rounded-full pl-2" placeholder="Sherlock Holmes, .."/>
+                        <input className="rounded-full pl-2" placeholder="Sherlock Holmes, .."/>
                     </div>
                     <div>
                         <ToggleGroup type="single" className="flex gap-2" defaultValue="books">
