@@ -1,7 +1,14 @@
 import {HomeLayout} from "@components/layouts/home_layout.jsx";
 import {Button} from "@components/ui/button.jsx";
+import {Link} from "react-router-dom";
+import {useEffect} from "react";
+import Cookies from "universal-cookie";
 
 function Homepage() {
+    const cookies = new Cookies();
+    useEffect(() => {
+        console.log(cookies.get('token'))
+    }, []);
     return (
         <HomeLayout>
             <main className="min-h-screen w-[80%] flex flex-col mt-10 gap-14 pb-[100px]">
@@ -67,9 +74,9 @@ function Homepage() {
                 <section className="w-full h-full">
                     <div className="w-full flex justify-between items-center">
                         <h3 className="font-bold text-xl pb-4">New Media</h3>
-                        <a href="/" className="text-primary font-semibold">
+                        <Link to="/products" className="text-primary font-semibold">
                             See More
-                        </a>
+                        </Link>
                     </div>
                     <div className="grid gap-2" style={{gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))"}}>
                         <div className="bg-red-500 h-[300px]"></div>
