@@ -14,4 +14,7 @@ export class AuthServices {
             email: email,
         })
     }
+    static getUser = async () => {
+        return await api.get("/user/me");
+    }
 }

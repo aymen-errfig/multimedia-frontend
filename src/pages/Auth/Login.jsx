@@ -21,6 +21,7 @@ function Login() {
             () => {
                 if (data?.token) {
                     cookies.set('token', data.token, {path: '/'});
+                    location.href = "/";
                 }
             }
         ).catch(() => {
